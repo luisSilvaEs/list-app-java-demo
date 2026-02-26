@@ -15,6 +15,7 @@ This project is being developed as a learning and experimentation environment fo
 ## 🚀 Current Features
 
 ### ✅ Status Endpoint
+
 Checks if the API is running.
 
 ```
@@ -35,10 +36,10 @@ Example response:
 
 Out-of-the-box monitoring endpoints provided by Spring Boot:
 
-| Endpoint | Description |
-|---|---|
+| Endpoint           | Description              |
+| ------------------ | ------------------------ |
 | `/actuator/health` | Application health check |
-| `/actuator/info` | Application metadata |
+| `/actuator/info`   | Application metadata     |
 
 Examples:
 
@@ -48,6 +49,7 @@ http://localhost:8080/actuator/info
 ```
 
 These endpoints are commonly used by:
+
 - Load balancers
 - Docker/Kubernetes health checks
 - Monitoring systems
@@ -65,6 +67,7 @@ http://localhost:8080/swagger-ui/index.html
 ```
 
 Swagger allows you to:
+
 - Explore endpoints
 - Execute requests interactively
 - View request/response schemas
@@ -86,6 +89,14 @@ Swagger allows you to:
 
 ### Start the application
 
+1. Start the Docker container (to start up MongoDB collection)
+
+```bash
+docker compose up -d
+```
+
+2. Start the app
+
 ```bash
 ./mvnw spring-boot:run
 ```
@@ -100,7 +111,7 @@ http://localhost:8080
 
 ### Stop the application
 
-Press:
+1. Press:
 
 ```
 CTRL + C
@@ -109,6 +120,12 @@ CTRL + C
 in the terminal where the app is running.
 
 ---
+
+2. Stop the container
+
+```bash
+docker compose down
+```
 
 ## 📂 Project Structure
 
